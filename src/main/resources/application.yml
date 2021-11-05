@@ -1,0 +1,24 @@
+server:
+  port: 9999
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: exchange_Rates_Data_Few_Currencies
+        uri: http://localhost:8080
+        predicates:
+        - Path=/exchange_Rates_Data_Few_Currencies/{access_Key}
+        filters:
+        - RewritePath=/exchange_Rates_Data_Few_Currencies
+        
+        -id: exchange_Rates_By_Date
+        uri: http://localhost:8080
+        predicates:        
+        - Path=/exchange_Rates_By_Date/{accessKey}/{date}
+        - Path=date
+        
+        
+        
+        
+        
