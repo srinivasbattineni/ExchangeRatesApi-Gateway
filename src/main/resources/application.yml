@@ -9,7 +9,28 @@ spring:
         uri: http://localhost:8080
         predicates:
         - Path=/exchange_Rates_Data_Few_Currencies/{access_Key}
-       
+               
+      - id: exchange_Rates_By_Date
+        uri: http://localhost:8080
+        predicates:        
+        - Path=/exchange_Rates_By_Date/{accessKey}/{date}
+        
+      - id: exchange_Rates_Data_All_Currencies
+        uri: http://localhost:8080
+        predicates:        
+        - Path=/exchange_Rates_Data_All_Currencies/{accessKey}
+      
+      - id: exchange_Rates_Details_By_Date
+        uri: http://localhost:8080
+        predicates:        
+        - Path=/exchange_Rates_Details_By_Date/{date}
+        
+      - id: exchange_Rates_In_Bwt_Dates
+        uri: http://localhost:8080
+        predicates:        
+        - Path=/exchange_Rates_In_Bwt_Dates/{fromDate}/{toDate}      
+        
+        
         
         
         
