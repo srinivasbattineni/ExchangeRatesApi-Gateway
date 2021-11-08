@@ -5,30 +5,30 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: exchange_Rates_Data_Few_Currencies
+      - id: exchange_rates_data_few_currencies
         uri: http://localhost:8080
         predicates:
-        - Path=/exchange_Rates_Data_Few_Currencies/{access_Key}
+        - Path=/exchange_rates_data_few_currencies/{access_Key}
                
-      - id: exchange_Rates_By_Date
+      - id: exchange_rates_by_date
         uri: http://localhost:8080
         predicates:        
-        - Path=/exchange_Rates_By_Date/{accessKey}/{date}
+        - Path=/exchange_rates_by_date/{accessKey}/{date}
         
-      - id: exchange_Rates_Data_All_Currencies
+      - id: exchange_rates_data_all_currencies
         uri: http://localhost:8080
         predicates:        
-        - Path=/exchange_Rates_Data_All_Currencies/{accessKey}
+        - Path=/exchange_rates_data_all_currencies/{accessKey}
       
-      - id: exchange_Rates_Details_By_Date
+      - id: exchange_rates_details_by_date
         uri: http://localhost:8080
         predicates:        
-        - Path=/exchange_Rates_Details_By_Date/{date}
+        - Path=/exchange_rates_details_by_date/{date}
         
-      - id: exchange_Rates_In_Bwt_Dates
+      - id: exchange_rates_in_bwt_dates
         uri: http://localhost:8080
         predicates:        
-        - Path=/exchange_Rates_In_Bwt_Dates/{fromDate}/{toDate}      
+        - Path=/exchange_rates_in_bwt_dates/{fromDate}/{toDate}      
         
         
         
